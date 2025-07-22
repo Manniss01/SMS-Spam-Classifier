@@ -45,7 +45,7 @@ sms-spam-classifier/
 │   ├── __init__.py             # Makes src a Python package
 │   ├── preprocess.py           # Text cleaning and feature extraction utilities
 │   ├── predict.py              # Mode
-├   └── model.py                # Script for training and saving the ML model and vectorizer
+├   └── train-model.py                # Script for training and saving the ML model and vectorizer
 ```
 
 ---
