@@ -31,7 +31,6 @@ An intelligent and lightweight web application that classifies SMS messages as *
 sms-spam-classifier/
 │
 ├── app.py                  # Entry point for the Gradio-based web application
-├── model.py                # Script for training and saving the ML model and vectorizer
 ├── requirements.txt        # List of Python dependencies
 ├── README.md               # Project documentation
 │
@@ -45,8 +44,10 @@ sms-spam-classifier/
 ├── src/                    # Source code modules
 │   ├── __init__.py             # Makes src a Python package
 │   ├── preprocess.py           # Text cleaning and feature extraction utilities
-│   └── predict.py              # Mode
+│   ├── predict.py              # Mode
+├   └── model.py                # Script for training and saving the ML model and vectorizer
 ```
+
 ---
 ## 🧠 Model Overview
 
