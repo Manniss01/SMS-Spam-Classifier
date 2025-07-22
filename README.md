@@ -110,6 +110,9 @@ We combine **statistical** and **textual** features:
    ```bash
    git clone https://github.com/Manniss01/SMS-Spam-Classifier
    cd sms-spam-classifier
+   ```
+   ![Gradio App](https://raw.githubusercontent.com/your-username/sms-spam-classifier/main/demo.png)
+
 
 
 
