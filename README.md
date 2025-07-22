@@ -46,5 +46,69 @@ sms-spam-classifier/
 │   ├── __init__.py             # Makes src a Python package
 │   ├── preprocess.py           # Text cleaning and feature extraction utilities
 │   └── predict.py              # Mode
+```
+---
+## 🧠 Model Overview
+
+### 📚 Dataset
+
+We use the [SMS Spam Collection Dataset](https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset), a well-known labeled dataset of 5,574 messages tagged as:
+- `ham` – legitimate (non-spam) messages
+- `spam` – promotional or scam content
+
+Each line contains a label and the corresponding message text.
+
+---
+
+### 🧪 Preprocessing
+
+Messages are processed via:
+
+- Lowercasing text
+- Removing punctuation and symbols
+- Tokenization using `nltk.word_tokenize`
+- Stopword removal using `nltk.corpus.stopwords`
+- Stemming via `nltk.PorterStemmer`
+
+---
+
+### ✨ Feature Engineering
+
+We combine **statistical** and **textual** features:
+
+| Feature Name   | Description                                 |
+|----------------|---------------------------------------------|
+| `body_len`     | Length of the message (excluding spaces)     |
+| `punct%`       | % of punctuation characters in the message   |
+| `tfidf`        | Vectorized word features using TF-IDF        |
+
+---
+
+### 🤖 Model Architecture
+
+**Algorithm:** `RandomForestClassifier`  
+**Why?**
+- Handles class imbalance well
+- Robust to overfitting
+- Works well with mixed numeric and sparse features
+
+**Training Configuration:**
+- `n_estimators=150`
+- `random_state=42`
+- Trained on 80% training, 20% test split
+
+**Artifacts Generated:**
+- `models/rf_model.pkl`
+- `models/tfidf_vectorizer.pkl`
+
+---
+
+## 💻 Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Manniss01/SMS-Spam-Classifier
+   cd sms-spam-classifier
+
 
 
