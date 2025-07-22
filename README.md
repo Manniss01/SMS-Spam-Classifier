@@ -111,7 +111,7 @@ We combine **statistical** and **textual** features:
    git clone https://github.com/Manniss01/SMS-Spam-Classifier
    cd sms-spam-classifier
    ```
-   ![App Screenshot](./screenshot.png)
+   ![App Screenshot](./demo.png)
 
 
 
